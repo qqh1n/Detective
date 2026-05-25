@@ -5,6 +5,7 @@ import Party.Scene.Evidence;
 import Party.Scene.Location;
 import Party.Scene.Scene;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class Party {
@@ -29,5 +30,19 @@ public class Party {
         this.scenes = scenes;
         this.solution = solution;
         this.detective = detective;
+    }
+
+    public List<Scene> getVisibleScenes() {
+        List<Scene> visibleScenes = new ArrayList<>();
+        for (Scene scene : scenes) {
+            if (isSceneVisible(scene)) {
+                visibleScenes.add(scene);
+            }
+        }
+        return visibleScenes;
+    }
+
+    private boolean isSceneVisible(Scene scene) {
+
     }
 }

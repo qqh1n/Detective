@@ -1,6 +1,6 @@
 package Party;
 
-import java.util.ArrayList;
+import java.util.LinkedList;
 import java.util.List;
 
 public class Detective {
@@ -9,7 +9,7 @@ public class Detective {
 
     public Detective(String name) {
         this.name = name;
-        this.journal = new ArrayList<>();
+        this.journal = new LinkedList<>();
     }
 
     public String getName() {
